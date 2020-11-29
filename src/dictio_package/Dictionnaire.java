@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Dictionnaire {
 	
-	private ArrayList<Mot> dict;
+	private static ArrayList<Mot> dict;
 	
 	public Dictionnaire() {
 		this.dict = new ArrayList<Mot>();
@@ -21,12 +21,22 @@ public class Dictionnaire {
 	 * Accesseurs et mutateurs
 	 */
 
-	public ArrayList<Mot> getDict() {
+	public static ArrayList<Mot> getDict() {
 		return dict;
 	}
 
 	public void setDict(ArrayList<Mot> dict) {
-		this.dict = dict;
+		Dictionnaire.dict = dict;
+	}
+	
+	public static ArrayList<String> getDictNom() {
+		ArrayList<String> listeMot = new ArrayList<String>();
+		
+		for(Mot m : dict) {
+			listeMot.add(m.getMot_nom());
+		}
+		
+		return listeMot;
 	}
 	
 	/*
@@ -50,7 +60,7 @@ public class Dictionnaire {
 
 	public void add(Mot m) {
 		// TODO Auto-generated method stub
-		this.dict.add(m);
+		Dictionnaire.dict.add(m);
 	}
 	
 	@Override

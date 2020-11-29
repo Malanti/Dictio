@@ -1,13 +1,17 @@
 package dictio_package;
 
-import java.awt.List;
+import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class LexiNode{
 
 	private Node racine;
+	private LinkedList<Node> lexic;
 	
 	public LexiNode() {
 		this.racine = new Node();
+		lexic = new LinkedList<Node>();
+		lexic.add(racine);
 	}
 	
 	public Node getRacine() {
@@ -17,6 +21,14 @@ public class LexiNode{
 	public void setRacine(Node racine) {
 		this.racine = racine;
 	}
+	
+	public LinkedList<Node> getLexic() {
+		return lexic;
+	}
+
+	public void setLexic(LinkedList<Node> lexic) {
+		this.lexic = lexic;
+	}
 	/*
 	 * Méthodes
 	 */
@@ -24,29 +36,17 @@ public class LexiNode{
 		
 	}
 	
-	public void ajoutMot(Mot m) {
-		//verification du noeuf precedent 
-		if(!racine.getListeEnfants().contains(m.getMot_nom().toUpperCase().charAt(0))) {
-			Node n = new Node(m.getMot_nom().toUpperCase().charAt(0));
-			racine.getListeEnfants().add(n);
-		}else {
-			for(Node n : racine.getListeEnfants())
-				if(m.getMot_nom().toUpperCase().charAt(0)==n.getC()) {
-					char c = n.getC();
-				}
-			/*
-			if() {
-				
-			}else {
-				
-			}*/
-		} 
+	public void ajoutMot(Mot m, Node n) {
+		
+		
 		
 	}
 	
 	public void modifierMot(Mot m) {
 		
 	}
+
+	
 	
 
 	

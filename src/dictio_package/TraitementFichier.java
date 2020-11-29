@@ -46,7 +46,12 @@ public class TraitementFichier{
 		
 	}
 	
-	public void modifierFichier() {
+	public void enregistrerFichier(String nomPath, Dictionnaire dictionnaire) {
+		/*
+		//Pour écrire à la suite du fichier, il faut utiliser la commande suivante
+		Path fichier = Paths.get(nomPath);
+			Files.write(nomPath, listeMot, Charset.forName(UTF-8), StandardOpenOption.APPEND);
+		*/
 		
 	}
 

@@ -2,24 +2,25 @@ package dictio_package;
 
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Node {
 	
 	private char c;
 	private Node precedent;
-	private ArrayList<Node> listeEnfants;
+	private LinkedList<Character> listeSuivants;
 	
 	//racine
 	public Node(){
 		this.precedent = null;
-		this.c = (Character) null;
-		listeEnfants = new ArrayList<Node>();
+		this.c = 0;
+		listeSuivants = new LinkedList<Character>();
 	}
 	
-	public Node(char c){
-		this.precedent = null;
+	public Node(char c, Node precedent){
+		this.precedent = precedent;
 		this.c = c;
-		listeEnfants = new ArrayList<Node>();
+		listeSuivants = new LinkedList<Character>();
 	}
 	
 	/*
@@ -41,15 +42,25 @@ public class Node {
 		this.precedent = precedent;
 	}
 
-	public ArrayList<Node> getListeEnfants() {
-		return listeEnfants;
+	public LinkedList<Character> getListeSuivants() {
+		return listeSuivants;
 	}
 
-	public void setListeEnfants(ArrayList<Node> listeEnfants) {
-		this.listeEnfants = listeEnfants;
+	public void setListeSuivants(LinkedList<Character> listeEnfants) {
+		this.listeSuivants= listeEnfants;
 	}
 	
+	public void addNodeToSuivants(Character c) {
+		listeSuivants.add(c);
+	}
 	
+	public String toString() {
+		String s = "";
+		for(Character c : this.listeSuivants) {
+			s+= Character.toString(c)+", ";
+		}
+		return s;
+	}
 	
 	
 	

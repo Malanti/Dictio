@@ -6,9 +6,10 @@ public class Test {
 	
 	public static void main(String[] args)
 	{
+		/*
 		Dictionnaire d = new Dictionnaire();
 		
-		/*Mot m1 = new Mot("Nom1", "Def1");
+		Mot m1 = new Mot("Nom1", "Def1");
 		Mot m2 = new Mot("Nom2", "Def2");
 		Mot m3 = new Mot("Nom3", "Def3");
 		
@@ -16,7 +17,7 @@ public class Test {
 		d.add(m2);
 		d.add(m3);
 		
-		System.out.println(d.toString());*/
+		System.out.println(d.toString());
 		System.out.println(d.toString());
 		
 		try {
@@ -30,6 +31,9 @@ public class Test {
 		
 		String s = "GAUD";
 		System.out.println(d.recherche(s).toString()); //liste qui contient la chaine de caractère s 
+		
+		*/
+		
 		
 	}
 
