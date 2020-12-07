@@ -144,4 +144,16 @@ public class Interface {
 		frame.getContentPane().add(scrollPane);
 		
 	}
+	private void ajoutModification() {
+		
+	}
+	private void rechercheMot() {
+		
+	}
+	private void chargerFichier() {
+			
+	}
+	private void enregistrement() {
+		
+	}
 }

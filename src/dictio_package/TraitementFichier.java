@@ -15,8 +15,8 @@ import java.util.regex.*;
 
 public class TraitementFichier{
 	
-	public TraitementFichier(String pathname, Dictionnaire d) throws DictionnaireException {
-		creationDictionnaire(pathname, d);
+	public TraitementFichier(String pathname, LexiNode d) throws DictionnaireException {
+		chargerFichier(pathname, d);
 	}
 
 	
@@ -24,7 +24,7 @@ public class TraitementFichier{
 	 * Méthodes
 	 */
 	
-	private void creationDictionnaire(String nomPath, Dictionnaire dictionnaire) throws DictionnaireException {
+	private void chargerFichier(String nomPath, LexiNode l) throws DictionnaireException {
 		try {
 			String ligne;
 			int nb = 0;
@@ -46,7 +46,7 @@ public class TraitementFichier{
 		
 	}
 	
-	public void enregistrerFichier(String nomPath, Dictionnaire dictionnaire) {
+	public void enregistrerFichier(String nomPath, LexiNode l) {
 		/*
 		//Pour écrire à la suite du fichier, il faut utiliser la commande suivante
 		Path fichier = Paths.get(nomPath);
